@@ -74,7 +74,11 @@ def help():
 
 
 def main():
-    choice = sys.argv[1]
+    try:
+        choice = sys.argv[1]
+    except:
+	help()
+	exit()
     if choice == "flume":
         CatFlume()
     elif choice == "server":
@@ -84,14 +88,9 @@ def main():
     elif choice == "hdfs":
         CatHdfs()
     else:
-	help()
-	exit()
+        help()
+        exit()
     str_tail = "".join(TailList)
     Command(str_tail)
-
-
 if __name__ == '__main__':
-    try:
         main()
-    except:
-	help()

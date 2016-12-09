@@ -27,6 +27,7 @@ global TailList
 TailList = []
 
 
+
 def Command(host):
     cmd = "multitail" + host
     #print cmdi					#DEBUG
@@ -72,7 +73,6 @@ def help():
 
     '''
 
-
 def main():
     try:
         choice = sys.argv[1]
@@ -92,5 +92,7 @@ def main():
         exit()
     str_tail = "".join(TailList)
     Command(str_tail)
+	
+	
 if __name__ == '__main__':
         main()

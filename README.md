@@ -40,3 +40,4 @@
 "监控取值":"{ITEM.LASTVALUE}"
 }
 ```
+![weixin-zabbix](https://github.com/kalivim/zabbix_weixin_python/raw/master/zabbix.png)

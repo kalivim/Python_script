@@ -36,7 +36,7 @@ class WeiXin(object):
     def __get_token(self):
         # print self.url_get_token
         headers = {'content-type': 'application/json'}
-        res = requests.get(self.url_get_token, headers=headers,  params=self.__params)
+        res = requests.get(self.url_get_token, headers=headers,  params=self.__params, verify=False)
 
         try:
             return res.json()['access_token']
@@ -55,7 +55,7 @@ class WeiXin(object):
         headers = {'content-type': 'application/json'}
         data = json.dumps(payload, ensure_ascii=False).encode('utf-8')
         params = self.__token_params
-        res = requests.post(self.url_send, headers=headers, params=params, data=data)
+        res = requests.post(self.url_send, headers=headers, params=params, data=data, verify=False)
         try:
             return res.json()
         except:

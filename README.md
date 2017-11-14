@@ -2,6 +2,9 @@
 
 编辑config.ini为相应id
 
+# 安装requests模块
+pip install requests
+
 
 ## 告警
 ```
